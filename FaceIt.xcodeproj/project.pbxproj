@@ -13,6 +13,7 @@
 		4DADF3551F1303170060A91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DADF3541F1303170060A91A /* Assets.xcassets */; };
 		4DADF3581F1303170060A91A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DADF3561F1303170060A91A /* LaunchScreen.storyboard */; };
 		4DADF3611F1305090060A91A /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADF3601F1305090060A91A /* FaceView.swift */; };
+		4DC737FC1F19AA04009B2A19 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC737FB1F19AA04009B2A19 /* FacialExpression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4DADF3571F1303170060A91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DADF3591F1303170060A91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DADF3601F1305090060A91A /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		4DC737FB1F19AA04009B2A19 /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				4DADF34F1F1303170060A91A /* FaceViewController.swift */,
+				4DC737FB1F19AA04009B2A19 /* FacialExpression.swift */,
 				4DADF3511F1303170060A91A /* Main.storyboard */,
 				4DADF3601F1305090060A91A /* FaceView.swift */,
 				4DADF3591F1303170060A91A /* Info.plist */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DADF3501F1303170060A91A /* FaceViewController.swift in Sources */,
+				4DC737FC1F19AA04009B2A19 /* FacialExpression.swift in Sources */,
 				4DADF34E1F1303170060A91A /* AppDelegate.swift in Sources */,
 				4DADF3611F1305090060A91A /* FaceView.swift in Sources */,
 			);
@@ -325,6 +329,7 @@
 				4DADF35E1F1303170060A91A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

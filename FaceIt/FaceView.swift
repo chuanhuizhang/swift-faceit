@@ -8,13 +8,32 @@
 
 import UIKit
 
+@IBDesignable
 class FaceView: UIView {
     
-    var scale: CGFloat = 0.9
-    var lineWidth: CGFloat = 5.0
-    var mouthCurvature: Double = 1.0 // 1.0 full smile, -1.0 full frown
-    var eyesOpen: Bool = true
-    var eyeBrowTilt: Double = 0.0 // 1.0 fully relaxed, -1.0 full furrow
+    @IBInspectable
+    var scale: CGFloat = 0.9 { didSet { setNeedsDisplay() } }
+    @IBInspectable
+    var lineWidth: CGFloat = 5.0 { didSet { setNeedsDisplay() } }
+    @IBInspectable
+    var color: UIColor = UIColor.red { didSet { setNeedsDisplay() } }
+    @IBInspectable
+    var mouthCurvature: Double = 1.0 { didSet { setNeedsDisplay() } }
+    @IBInspectable
+    var eyesOpen: Bool = false { didSet { setNeedsDisplay() } }
+    @IBInspectable
+    var eyeBrowTilt: Double = 1.0 { didSet { setNeedsDisplay() } }
+    
+    @objc
+    func changeScale(_ recognizer: UIPinchGestureRecognizer) {
+        switch recognizer.state {
+        case .changed,.ended:
+            scale *= recognizer.scale
+            recognizer.scale = 1.0
+        default:
+            break
+        }
+    }
     
     private var skullRadius: CGFloat {
         return min(bounds.size.width, bounds.size.height) / 2 * scale
@@ -116,7 +135,7 @@ class FaceView: UIView {
     
     override func draw(_ rect: CGRect) {
         
-        UIColor.red.setStroke()
+        color.setStroke()
         pathForCircleCenteredAtPoint(midPoint: skullCenter, withRadius: skullRadius).stroke()
         pathForEye(eye: .Left).stroke()
         pathForEye(eye: .Right).stroke()
