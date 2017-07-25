@@ -35,6 +35,19 @@ class FaceView: UIView {
         }
     }
     
+    @objc
+    func changeColor(_ recognier: UITapGestureRecognizer) {
+        switch recognier.state {
+        case .changed,.ended:
+            let redValue = CGFloat(arc4random_uniform(255)) / 255.0;
+            let greenValue = CGFloat(arc4random_uniform(255)) / 255.0;
+            let blueValue = CGFloat(arc4random_uniform(255)) / 255.0;
+            color = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1.0)
+        default:
+            break
+        }
+    }
+    
     private var skullRadius: CGFloat {
         return min(bounds.size.width, bounds.size.height) / 2 * scale
     }

@@ -14,6 +14,7 @@
 		4DADF3581F1303170060A91A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DADF3561F1303170060A91A /* LaunchScreen.storyboard */; };
 		4DADF3611F1305090060A91A /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADF3601F1305090060A91A /* FaceView.swift */; };
 		4DC737FC1F19AA04009B2A19 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC737FB1F19AA04009B2A19 /* FacialExpression.swift */; };
+		4DC737FE1F26E16D009B2A19 /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC737FD1F26E16D009B2A19 /* EmotionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4DADF3591F1303170060A91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DADF3601F1305090060A91A /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		4DC737FB1F19AA04009B2A19 /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
+		4DC737FD1F26E16D009B2A19 /* EmotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		4DADF34C1F1303160060A91A /* FaceIt */ = {
 			isa = PBXGroup;
 			children = (
+				4DC737FD1F26E16D009B2A19 /* EmotionsViewController.swift */,
 				4DADF34F1F1303170060A91A /* FaceViewController.swift */,
 				4DC737FB1F19AA04009B2A19 /* FacialExpression.swift */,
 				4DADF3511F1303170060A91A /* Main.storyboard */,
@@ -151,6 +154,7 @@
 			files = (
 				4DADF3501F1303170060A91A /* FaceViewController.swift in Sources */,
 				4DC737FC1F19AA04009B2A19 /* FacialExpression.swift in Sources */,
+				4DC737FE1F26E16D009B2A19 /* EmotionsViewController.swift in Sources */,
 				4DADF34E1F1303170060A91A /* AppDelegate.swift in Sources */,
 				4DADF3611F1305090060A91A /* FaceView.swift in Sources */,
 			);
@@ -288,6 +292,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SJX8TR8L26;
 				INFOPLIST_FILE = FaceIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuanhuizhang.FaceIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SJX8TR8L26;
 				INFOPLIST_FILE = FaceIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuanhuizhang.FaceIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";

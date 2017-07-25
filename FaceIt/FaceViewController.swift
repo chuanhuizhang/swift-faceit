@@ -9,11 +9,16 @@
 import UIKit
 
 class FaceViewController: UIViewController {
+    
+    // Mark: Modal
+    
     var expression = FacialExpression(eyes: .Closed, eyeBrows: .Furrowed, mouth: .Frown) {
         didSet {
-            updateUI()
+            updateUI() // Modal changed, so update UI
         }
     }
+    
+    // Mark: View
     
     @IBOutlet weak var faceView: FaceView! {
         didSet {
@@ -32,9 +37,31 @@ class FaceViewController: UIViewController {
             )
             sadderSwipeGestureRecognizer.direction = .down
             faceView.addGestureRecognizer(sadderSwipeGestureRecognizer)
+            
+            faceView.addGestureRecognizer(UITapGestureRecognizer(
+                target: self, action: #selector(FaceViewController.toggleEyes(_:)))
+            )
+            
+            let doubleTapGestureRecognier = UITapGestureRecognizer(target: faceView, action: #selector(FaceView.changeColor(_:)))
+            doubleTapGestureRecognier.numberOfTapsRequired = 2
+            faceView.addGestureRecognizer(doubleTapGestureRecognier)
+            
             updateUI()
         }
     }
+    
+    @objc
+    func toggleEyes(_ recognizer: UITapGestureRecognizer) {
+        if recognizer.state == .ended {
+            switch expression.eyes {
+            case .Open: expression.eyes = .Closed
+            case .Closed: expression.eyes = .Open
+            case .Squinting: break
+            }
+        }
+    }
+    
+    // Mark: Gesture handlers
     
     @objc
     func increaseHappiness() {
@@ -50,18 +77,19 @@ class FaceViewController: UIViewController {
     private var eyeBrowTilts = [FacialExpression.EyeBrows.Relaxed:0.5,.Furrowed:-0.5,.Normal:0.0]
     
     private func updateUI() {
-        switch expression.eyes {
-        case .Open:
-            faceView.eyesOpen = true
-        case .Closed:
-            faceView.eyesOpen = false
-        case .Squinting:
-            faceView.eyesOpen = false
+        if faceView != nil {
+            switch expression.eyes {
+            case .Open:
+                faceView.eyesOpen = true
+            case .Closed:
+                faceView.eyesOpen = false
+            case .Squinting:
+                faceView.eyesOpen = false
+            }
+            
+            faceView.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
+            faceView.eyeBrowTilt = eyeBrowTilts[expression.eyeBrows] ?? 0.0
         }
-        
-        faceView.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
-        faceView.eyeBrowTilt = eyeBrowTilts[expression.eyeBrows] ?? 0.0
-        
     }
 }
 
