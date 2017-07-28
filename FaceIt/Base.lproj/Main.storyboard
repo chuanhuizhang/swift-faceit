@@ -29,7 +29,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Angry"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="angry" id="179-aN-7Bb"/>
+                                            <segue destination="J25-sK-jdW" kind="showDetail" identifier="angry" id="179-aN-7Bb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLF-E5-sVF">
@@ -37,7 +37,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Happy"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="happy" id="BC4-fc-uiO"/>
+                                            <segue destination="J25-sK-jdW" kind="showDetail" identifier="happy" id="BC4-fc-uiO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHX-9p-sgs">
@@ -45,7 +45,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Worried"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="worried" id="swb-su-Uvg"/>
+                                            <segue destination="J25-sK-jdW" kind="showDetail" identifier="worried" id="swb-su-Uvg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oao-gC-Xl7">
@@ -53,7 +53,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Mischievious"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="mischievious" id="Tb6-i1-0Xr"/>
+                                            <segue destination="J25-sK-jdW" kind="showDetail" identifier="mischievious" id="Tb6-i1-0Xr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -81,14 +81,14 @@
                 <splitViewController id="29t-il-9yT" sceneMemberID="viewController">
                     <connections>
                         <segue destination="AlG-ly-szW" kind="relationship" relationship="masterViewController" id="vKR-BN-AnO"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="oIy-Io-eEf"/>
+                        <segue destination="J25-sK-jdW" kind="relationship" relationship="detailViewController" id="oIy-Io-eEf"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IH7-9B-4C0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1702" y="428"/>
         </scene>
-        <!--Item-->
+        <!--Face View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FaceViewController" customModule="FaceIt" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,7 +97,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="440.66666665673256" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440.66666666666663" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rB0-No-LQC" customClass="FaceView" customModule="FaceIt" customModuleProvider="target">
@@ -125,14 +125,14 @@
                             <constraint firstItem="rB0-No-LQC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wWl-EX-8ao"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="NGv-Zh-C9x"/>
+                    <navigationItem key="navigationItem" id="FT7-NQ-ufN"/>
                     <connections>
                         <outlet property="faceView" destination="rB0-No-LQC" id="mma-bX-VA8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="886"/>
+            <point key="canvasLocation" x="19" y="971"/>
         </scene>
         <!--Item-->
         <scene sceneID="KC8-cW-Jjf">
@@ -152,6 +152,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lpx-Up-jfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-748.36956521739137" y="-136.23188405797103"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="iWN-0v-Odl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J25-sK-jdW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="NGv-Zh-C9x"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bTX-Qc-461">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="A3O-Q0-28S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhH-4c-3Qu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-748" y="972"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

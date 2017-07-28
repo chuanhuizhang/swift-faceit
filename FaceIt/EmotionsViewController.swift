@@ -21,11 +21,17 @@ class EmotionsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let destinationVC = segue.destination
+        var destinationVC = segue.destination
+        if let navCtrl = destinationVC as? UINavigationController {
+            destinationVC = navCtrl.visibleViewController ?? destinationVC
+        }
         if let faceVC = destinationVC as? FaceViewController {
             if let identifier = segue.identifier {
                 if let expression = emotionalFaces[identifier] {
                     faceVC.expression = expression
+                    if let sendingBtn = sender as? UIButton {
+                        faceVC.navigationItem.title = sendingBtn.currentTitle
+                    }
                 }
             }
         }
